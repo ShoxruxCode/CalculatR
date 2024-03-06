@@ -7,8 +7,9 @@ Console.Write("Enter second number: ");
 string asSecondNumber = Console.ReadLine();
 int secondNumber = Convert.ToInt32(asSecondNumber);
 
-Console.WriteLine($"Adding: {firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
-Console.WriteLine($"Substructing: {firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
-Console.WriteLine($"Multipling: {firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
-Console.WriteLine($"Deviding: {firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
-Console.WriteLine($"asDeviding: {firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
+Console.WriteLine($"first number is greater than second number: {firstNumber > secondNumber}");
+Console.WriteLine($"first number is lower than second number: {firstNumber < secondNumber}");
+Console.WriteLine($"first number is greater or equal to second number: {firstNumber >= secondNumber}");
+Console.WriteLine($"first number is lower or equal to second number: {firstNumber <= secondNumber}");
+Console.WriteLine($"first number is not equal to second number: {firstNumber != secondNumber}");
+Console.WriteLine($"first number must be equal to second number: {firstNumber == secondNumber}");
