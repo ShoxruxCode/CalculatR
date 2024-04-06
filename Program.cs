@@ -16,3 +16,8 @@ if(firstNumber > secondNumber)
 {
     Console.WriteLine("first number is lower than second number");
 }
+string message =
+    firstNumber >= secondNumber 
+        ? "first number is bigger than or equal to second number" 
+        : "first number is lower than second number";
+Console.WriteLine(message);
