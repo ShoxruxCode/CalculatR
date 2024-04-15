@@ -1,62 +1,82 @@
 ﻿using System;
 
-Console.WriteLine("1-vazifa boshlandi");
-// 1-vazifa sharti :
-// 1. Doira yuzi va aylana uzunligini hisoblash
-// Console dan raduisni qiymatini oling va erkanga doiraning yuzi (S=pi*radius^2) va 
-// aylana uzunligini (L=2*pi*radius) erkanga chiqaring.
-// Input: radius=3
-// Output: S=28.2743338823081, L=18.8495559215388
-// --------------
-// Input: radius=4.23
-// Output: S=56.2122031914168, L=26.5778738493697
-
-// Dastur kodi :
-Console.Write("Radiusni kiriting : ");
-string radiusAsString = Console.ReadLine();
-double radius = Convert.ToDouble(radiusAsString);
-double PI = Math.PI;
-double S = PI * Math.Pow(radius,2);
-double L = 2 * PI * radius;
-Console.WriteLine($"Doira yuzi : {S}");
-Console.WriteLine($"Aylana uzunligi : {L}");
-Console.WriteLine("1-vazifa yakunlandi");
-// Dastur yakunlandi
-Console.WriteLine("2-vazifa boshlandi");
-// 2-vazifa sharti :
-// 2. Valyuta konvertri
-// Bir valyutadagi summani sumga aylantiruvchi dastur tuzing. Summa va valyuta kursini 
-// e’lon qiling va konvertatsiya qilingan summani hisoblang. Natijani ekranga chiqaring.
-// Input: qiymat=2, kurs=12400 so’m
-// Output: 24800 so’m
-// ----------------
-// Input: qiymat=7.6, kurs=12400 so’m
-// Output: 94240 so’m
-
-// Dastur kodi :
-Console.Write("Summaning qiymatini kiriting : ");
-double qiymat = Convert.ToDouble(Console.ReadLine());
-Console.Write("Valyuta kursini kiriting : ");
-double kurs = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine($"Konvertatsiya qilingan summa hisoblandi : {qiymat * kurs}");
-Console.WriteLine("2-vazifa yakunlandi");
-// Dastur yakunlandi
-Console.WriteLine("3-vazifa boshlandi");
-// 3-vazifa sharti :
-// 3. Yoshni hisoblash
-// Foydalanuvchining tug’ilgan yilini (int x) consoledan oling. Uning yoshini kunlarda 
-// ifodalang. Kabisa yilini hisobga olmang
-// Input: x=2004
-// Output: 6935
-// -----------------
-// Input: x= 1996
-// Output: 9855
-
-// Dastur kodi :
-Console.Write("Tug'ilgan yilingizni kiriting : ");
-int birthYear = Convert.ToInt32(Console.ReadLine());
-int age = 2024 - birthYear;
-int daysInOneYear = 365;
-Console.WriteLine($"Sizning yoshingiz kunlarda hisoblandi : {age * daysInOneYear}");
-Console.WriteLine("3-vazifa yakunlandi");
-// Dastur yakunlandi
+// Basics.Tanlash bo’limi uchun 1-amaliy vazifa
+// 1-topshiriq
+// String ustida amallar
+// String tipida (string str) qiymat berilgan. Consoleda int tipidagi qiymat kiriting. Agar
+// bu son str ning uzunligidan katta bo’lsa, str ni katta harflarga o’giring, aks holda kichik
+// harflarga o’giring.
+// Input: x=13, str=”teLefOn”
+// Output: “TELEFON”
+// ---------------
+// Input: x=4, str=”komPyuter”
+// Output: “kompyuter”
+Console.Write("Biron bir katta va kichik harflardan iborat matn kiriting: ");
+string str = Console.ReadLine();
+Console.Write("Kiritilgan matnning uzunligidan katta yoki kichik bo'lgan butun son kiriting: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number > str.Length)
+{
+    str = str.ToUpper();
+    Console.WriteLine($"Kiritilgan matn katta harflarga o'girildi: {str}");
+}
+else if(number < str.Length)
+{
+    str = str.ToLower();
+    Console.WriteLine($"Kiritilgan matn kichik harflarga o'girildi: {str}");
+}
+else if(number == str.Length)
+{
+    Console.WriteLine("Kiritilgan son va matnning uzunligi teng bo'lganligi uchun kiritilgan matn o'zgarishsiz qoldi");
+}
+else
+{
+    Console.WriteLine("Operation is not found!");
+}
+// 2-topshiriq
+// Quyida ternary operator bilan ifodalandan qiymatni if-else yordamida ifodalang.
+// int x = 15;
+// int y = 10;
+// string result = (x > y)
+//     ? "x is greater than y"
+//     : (x < y)
+//         ? "x is less than y"
+//         : (x == y)
+//             ? "x is equal to y"
+//             : "x and y are not comparable";
+// Console.WriteLine(result);
+int x = 15;
+int y = 10;
+if(x > y)
+{
+    Console.WriteLine("x is greater than y");
+}
+    else if(x < y)
+    {
+        Console.WriteLine("x is less than y");
+    }
+        else if(x == y)
+        {
+            Console.WriteLine("x is equal to y");
+        }
+            else
+            {
+                Console.WriteLine("x and y are not comparable");
+            }
+// 3-topshiriq
+// Consoleda o’zbek tilida kiritilgan hafta kunini ingliz tiliga o’girib, natijani ekranga
+// chiqaradigan dastur tuzing. Switch expression dan foydalaning!
+Console.Write("Biron bir hafta kunini kiriting (so'zning bosh harfi katta harfda yozilsin): ");
+string dayInWeek = Console.ReadLine();
+string result = dayInWeek switch
+{
+    "Dushanba"   => "Monday",
+    "Seshanba"   => "Tuesday",
+    "Chorshanba" => "Wednesday",
+    "Payshanba"  => "Thursday",
+    "Juma"       => "Friday",
+    "Shanba"     => "Saturday",
+    "Yakshanba"  => "Sunday",
+    _ => "Bunday hafta kuni mavjud emas!"
+};
+Console.WriteLine(result);
