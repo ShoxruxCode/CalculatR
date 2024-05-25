@@ -1,25 +1,29 @@
 ﻿using System;
 using CalculatR.Classes;
-
-namespace CalculatR
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
-        static void Main()
-        {
-            Console.Write("Enter first number: ");
-            string asFirstNumber = Console.ReadLine();
-            int firstNumber = Convert.ToInt32(asFirstNumber);
-            Console.Write("Enter second number: ");
-            string asSecondNumber = Console.ReadLine();
-            int secondNumber = Convert.ToInt32(asSecondNumber);
-            Console.Write("Enter operations (+, -, *, /, %) : ");
-            string operations = Console.ReadLine();
+        Security security = new Security();
+        Calculator calculator = new Calculator();
+        
+        security.CheckPassword();
+        calculator.GetInputs();
+        string message =
+            !calculator.IsFirstNumberPositive()
+                ? "1st number is not positive"
+                : "1st number is not negative";
+        Console.WriteLine(message);
 
-            Operation arithmetic = new Operation(firstNumber, secondNumber);
-            
-            arithmetic.CompareNumber(firstNumber, secondNumber);
-            arithmetic.SwitchOperation(firstNumber, secondNumber, operations);
-        }
+        calculator.CompareInputs();
+
+        string result = calculator.Calculate();
+
+        Console.WriteLine($"{result} \n");
+
+        calculator.PrintEvenNumbers();
+        Console.WriteLine("");
+
+        calculator.PrintMultiplicationTable();
     }
 }
