@@ -4,49 +4,38 @@ namespace CalculatR.Classes
 {
     public class Database
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Marka { get; set; }
-        public int Price { get; set; }
-        public Database(string name, string marka, int price)
+        public string SurName { get; set; }
+        public int Age { get; set; }
+        public double Weight { get; set; }
+        public Database(int id, string name, string surName, int age, double weight)
         {
+            Id = id;
             Name = name;
-            Marka = marka;
-            Price = price;
+            SurName = surName;
+            Age = age;
+            Weight = weight;
         }
-        public static List<Database> GetCars()
+        public static List<Database> GetBoxers()
         {
             return new List<Database>
             {
-                new Database("Model S", "Tesla", 79999),
-                new Database("Mustang", "Ford", 55999),
-                new Database("Civic", "Honda", 23999),
-                new Database("Camry", "Toyota", 24999),
-                new Database("A6", "Audi", 45999),
-                new Database("3 Series", "BMW", 40999),
-                new Database("Corolla", "Toyota", 19999),
-                new Database("Accord", "Honda", 27999),
-                new Database("Charger", "Dodge", 29999),
-                new Database("Challenger", "Dodge", 28999),
-                new Database("F-150", "Ford", 49999),
-                new Database("Altima", "Nissan", 24999),
-                new Database("G-Class", "Mercedes-Benz", 130000),
-                new Database("Model X", "Tesla", 89999),
-                new Database("CX-5", "Mazda", 26999),
-                new Database("Outlander", "Mitsubishi", 30999),
-                new Database("E-Class", "Mercedes-Benz", 65999),
-                new Database("Sierra", "GMC", 52999),
-                new Database("Wrangler", "Jeep", 35999),
-                new Database("Ram 1500", "Dodge", 43999),
-                new Database("Escalade", "Cadillac", 89999),
-                new Database("Cherokee", "Jeep", 34999),
-                new Database("Tucson", "Hyundai", 25999),
-                new Database("Soul", "Kia", 19999),
-                new Database("K5", "Kia", 23999),
-                new Database("XC90", "Volvo", 58999),
-                new Database("Rav4", "Toyota", 30999),
-                new Database("Model 3", "Tesla", 39999),
-                new Database("Leaf", "Nissan", 31999),
-                new Database("Santa Fe", "Hyundai", 31999)
+                new Database(1, "Muhammad", "Ali", 74, 107.5),
+                new Database(2, "Mike", "Tyson", 54, 100.2),
+                new Database(3, "Floyd", "Mayweather", 44, 49.1),
+                new Database(4, "Manny", "Pacquiao", 42, 66.2),
+                new Database(5, "Evander", "Holyfield", 59, 97.5),
+                new Database(6, "Lennox", "Lewis", 56, 115.0),
+                new Database(7, "Vasyl", "Lomachenko", 33, 44.0),
+                new Database(8, "Gennady", "Golovkin", 39, 72.5),
+                new Database(9, "Anthony", "Joshua", 32, 108.9),
+                new Database(10, "Tyson", "Fury", 33, 123.5),
+                new Database(11, "Deontay", "Wilder", 36, 104.8),
+                new Database(12, "Canelo", "Alvarez", 31, 79.4),
+                new Database(13, "Joe", "Frazier", 67, 104.5),
+                new Database(14, "Rocky", "Marciano", 45, 88.9),
+                new Database(15, "George", "Foreman", 72, 110.4)
             };
         }
     }
