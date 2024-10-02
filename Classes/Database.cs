@@ -1,58 +1,53 @@
 using System.Collections.Generic;
-using CalculatR.Enums;
 
 namespace CalculatR.Classes
 {
     public class Database
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public string SurName { get; set; }
-        public int Classes { get; set; }
-        public StudentType Grades { get; set; }
-        public Database(int id, string name, string surName, int classes, int grades)
+        public string Marka { get; set; }
+        public int Price { get; set; }
+        public Database(string name, string marka, int price)
         {
-            Id = id;
             Name = name;
-            SurName = surName;
-            Classes = classes;
-            Grades = (StudentType)grades;
+            Marka = marka;
+            Price = price;
         }
-        public static List<Database> GetStudents()
+        public static List<Database> GetCars()
         {
             return new List<Database>
             {
-                new Database(1, "Ali", "Karimov", 6, 0),
-                new Database(2, "Vali", "Saidov", 6, 0),
-                new Database(3, "Sami", "Murodov", 6, 0),
-                new Database(4, "Guli", "Abdulayeva", 7, 0),
-                new Database(5, "Zebo", "Qodirova", 7, 0),
-                new Database(6, "Madina", "Rustamova", 7, 1),
-                new Database(7, "Bekzod", "Rahmonov", 7, 1),
-                new Database(8, "Shahzod", "Usmonov", 7, 1),
-                new Database(9, "Dilnoza", "Bekmurodova", 8, 1),
-                new Database(10, "Jasur", "Bozorov", 8, 1),
-                new Database(11, "Otabek", "Yusupov", 8, 2),
-                new Database(12, "Nigina", "Raxmatullaeva", 8, 2),
-                new Database(13, "Xurshid", "Tojiev", 8, 2),
-                new Database(14, "Malika", "Ismoilova", 9, 2),
-                new Database(15, "Aziz", "Xudoyberdiev", 9, 2),
-                new Database(16, "Omon", "Mamurov", 9, 3),
-                new Database(17, "Nodira", "Salimova", 9, 3),
-                new Database(18, "Shoxrux", "Odilov", 9, 3),
-                new Database(19, "Zilola", "Saydullaeva", 10, 3),
-                new Database(20, "Farrux", "Tursunov", 10, 3),
-                new Database(21, "Diyor", "Jumaboev", 10, 4),
-                new Database(22, "Aziza", "Shermurodova", 10, 4),
-                new Database(23, "Begzod", "Holikov", 10, 4),
-                new Database(24, "Dilshod", "Rahimov", 11, 4),
-                new Database(25, "Shahlo", "Mamatova", 11, 4),
-                new Database(26, "Timur", "Axmedov", 11, 5),
-                new Database(27, "Olim", "Sobirov", 11, 5),
-                new Database(28, "Saida", "Narzullaeva", 11, 5),
-                new Database(29, "Javohir", "Xolmatov", 6, 5),
-                new Database(30, "Sardor", "Aliev", 6, 5)
-            }; 
+                new Database("Model S", "Tesla", 79999),
+                new Database("Mustang", "Ford", 55999),
+                new Database("Civic", "Honda", 23999),
+                new Database("Camry", "Toyota", 24999),
+                new Database("A6", "Audi", 45999),
+                new Database("3 Series", "BMW", 40999),
+                new Database("Corolla", "Toyota", 19999),
+                new Database("Accord", "Honda", 27999),
+                new Database("Charger", "Dodge", 29999),
+                new Database("Challenger", "Dodge", 28999),
+                new Database("F-150", "Ford", 49999),
+                new Database("Altima", "Nissan", 24999),
+                new Database("G-Class", "Mercedes-Benz", 130000),
+                new Database("Model X", "Tesla", 89999),
+                new Database("CX-5", "Mazda", 26999),
+                new Database("Outlander", "Mitsubishi", 30999),
+                new Database("E-Class", "Mercedes-Benz", 65999),
+                new Database("Sierra", "GMC", 52999),
+                new Database("Wrangler", "Jeep", 35999),
+                new Database("Ram 1500", "Dodge", 43999),
+                new Database("Escalade", "Cadillac", 89999),
+                new Database("Cherokee", "Jeep", 34999),
+                new Database("Tucson", "Hyundai", 25999),
+                new Database("Soul", "Kia", 19999),
+                new Database("K5", "Kia", 23999),
+                new Database("XC90", "Volvo", 58999),
+                new Database("Rav4", "Toyota", 30999),
+                new Database("Model 3", "Tesla", 39999),
+                new Database("Leaf", "Nissan", 31999),
+                new Database("Santa Fe", "Hyundai", 31999)
+            };
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using CalculatR.Classes;
-using CalculatR.Enums;
 
 namespace CalculatR
 {
@@ -9,20 +8,20 @@ namespace CalculatR
     {
         static void Main(string[] args)
         {
-            Student student= new Student();
-            List<Database> students = Database.GetStudents();
-
-            Console.Write("1 dan 5 gacha bo'lgan oraliqda bahoni kiriting, shu baho olgan o'quvchilar ro'yxatini olish uchun: ");
-            int grades;
-            if (int.TryParse(Console.ReadLine(), out grades) && grades >= 0 && grades <= 5)
+            Car car = new Car();
+            List<Database> cars = Database.GetCars();
+            Console.WriteLine("Ikkita narx kiriting, shu narxlar oralig'idagi avtomobillar haqida ma'lumot olish uchun:");
+            Console.Write("1-narx: ");
+            int firstPrice = int.Parse(Console.ReadLine());
+            Console.Write("2-narx: ");
+            int secondPrice = int.Parse(Console.ReadLine());
+            if(firstPrice >=0 && secondPrice >=0)
             {
-                StudentType grade = (StudentType)grades;
-
-                student.PrintEnteredGradeStudents(students, grade);
+                car.PrintEnteredPriceCars(cars, firstPrice, secondPrice);
             }
             else
             {
-                Console.WriteLine("Notog'ri baho kiritildi.");
+                Console.WriteLine("Notog'ri qiymat kiritildi.");
             }
         }
     }
