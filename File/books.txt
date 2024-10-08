@@ -1,0 +1,30 @@
+1, Qahramon, Tarixiy, Ali Karimov
+2, Olamning siri, Fantastika, Vali Saidov
+3, Sadoqat, Romantika, Sami Murodov
+4, Orzu, Drama, Guli Abdulayeva
+5, Daryo, Sarguzasht, Zebo Qodirova
+6, Qora Qalam, Detektiv, Madina Rustamova
+7, Yurak yoli, Romantika, Bekzod Rahmonov
+8, Moviy Quyosh, Fantastika, Shahzod Usmonov
+9, Sirli kunlar, Sarguzasht, Dilnoza Bekmurodova
+10, Shamol izi, Drama, Jasur Bozorov
+11, Tungi safar, Fantastika, Otabek Yusupov
+12, Sohil, Romantika, Nigina Raxmatullaeva
+13, Oqshom, Drama, Xurshid Tojiev
+14, Yolg'on, Detektiv, Malika Ismoilova
+15, Olmos, Sarguzasht, Aziz Xudoyberdiev
+16, Shafqat, Drama, Omon Mamurov
+17, Sarob, Romantika, Nodira Salimova
+18, Jangchi, Tarixiy, Shoxrux Odilov
+19, Dunyo to'fonlari, Fantastika, Zilola Saydullaeva
+20, Sohib, Tarixiy, Farrux Tursunov
+21, Oy nurida, Romantika, Diyor Jumaboev
+22, Qish nafasi, Drama, Aziza Shermurodova
+23, Sirli qal'a, Sarguzasht, Begzod Holikov
+24, Yolg'iz, Detektiv, Dilshod Rahimov
+25, Tog' oldi, Drama, Shahlo Mamatova
+26, Parvoz, Fantastika, Timur Axmedov
+27, Ko'k osmon, Sarguzasht, Olim Sobirov
+28, Yurt himoyachisi, Tarixiy, Saida Narzullaeva
+29, Shabnam, Romantika, Javohir Xolmatov
+30, Tungi tun, Detektiv, Sardor Aliev

@@ -1,0 +1,5 @@
+1, rustam_sharipov, Rustam123, Rustam, Sharipov, 34, 3, Qahramon, Olamning siri, Sadoqat
+2, jasmina_sobirova, Jasmina987, Jasmina, Sobirova, 28, 2, Orzu, Daryo
+3, ilhom_nurmatov, Ilhom345, Ilhom, Nurmatov, 40, 1, Qora Qalam
+4, dilafruz_qobilova, Dilafruz789, Dilafruz, Qobilova, 25, 3, Yurak yoli, Moviy Quyosh, Sirli kunlar
+5, sahobat_karimova, Sahobat456, Sahobat, Karimova, 30, 2, Shamol izi, Tungi safar

@@ -9,8 +9,8 @@ namespace CalculatR
         static void Main(string[] args)
         {
             ILoggerBroker logger = new LoggerBroker();
-            PhoneBookService phoneBookService = new PhoneBookService(logger);
-            phoneBookService.GetAllMethodsFromFileBroker();
+            ILibraryService libraryService= new LibraryService(logger);
+            libraryService.GetAllMethods();
         }
     }
 }
