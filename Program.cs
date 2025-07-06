@@ -1,29 +1,26 @@
 ﻿using System;
 using CalculatR.Classes;
-internal class Program
+public class Program
 {
     private static void Main(string[] args)
     {
-        Security security = new Security();
-        Calculator calculator = new Calculator();
-        
-        security.CheckPassword();
-        calculator.GetInputs();
-        string message =
-            !calculator.IsFirstNumberPositive()
-                ? "1st number is not positive"
-                : "1st number is not negative";
-        Console.WriteLine(message);
+        ChekLetter chekLetter = new ChekLetter();
+        PromptService promptService = new PromptService();
+        FirstLetterOfName firstLetterOfName = new FirstLetterOfName();
 
-        calculator.CompareInputs();
+        // 1-vazifa. Katta harf tekshiruvi (Char & Bool)
+        Console.WriteLine("---1-vazifa---");
+        Console.Write("Iltimos bitta harf kiriting: ");
+        string inputLetter = Console.ReadLine();
 
-        string result = calculator.Calculate();
+        chekLetter.ChekLetterUpperOrLower(inputLetter);
 
-        Console.WriteLine($"{result} \n");
+        // 2-vazifa. Ha/yoʻq javobini berish (Bool)
+        Console.WriteLine("---2-vazifa---");
+        promptService.Questions();
 
-        calculator.PrintEvenNumbers();
-        Console.WriteLine("");
-
-        calculator.PrintMultiplicationTable();
+        // 3-vazifa. Ismdagi birinchi harf (String & Char)
+        Console.WriteLine("---2-vazifa---");
+        firstLetterOfName.FirstLetterOfUserName();
     }
 }
